@@ -10,13 +10,13 @@ References:
     Google's Gemini: https://gemini.google.com<br />
     </div>
   </div>
-  <br /> <br />
+  <br /> 
   <div style="margin-left: 10px;"> 
   Object: <br />
     <div style="margin-left: 10px;"> 
     MDN Docs: <br />
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects <br />
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br /><br />
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br />
     Google's Gemini: 
       https://gemini.google.com
     </div>
