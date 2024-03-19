@@ -10,7 +10,7 @@ References:
     Google's Gemini: https://gemini.google.com<br />
     </div>
   </div>
-
+  <br /> <br />
   <div style="margin-left: 10px;"> 
   Object: <br />
     <div style="margin-left: 10px;"> 
