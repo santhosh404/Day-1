@@ -1,0 +1,105 @@
+
+Introduction to objects:
+
+    In JavaScript, objects are fundamental building blocks. They store collections of data and functionality under a single 
+    entity. Unlike primitive data types (numbers, strings, booleans, etc.) that hold a single value, objects can hold a 
+    variety of data types and even other objects within them.
+
+
+Most used standard built-in objects:
+
+    Fundamental Objects:
+
+        * Object
+        * Boolean
+
+    Error objects:
+
+        * Error
+        * ReferenceError
+        * SyntaxError
+        * TypeError
+        * URIError
+        * InternalError
+    
+    Numbers and dates: 
+
+        * Number
+        * Date
+
+    Indexed Collections:
+
+        * Array
+    
+    Keyed collection: 
+
+        * Map
+        * Set
+
+
+What is Object in js ?
+
+    In JavaScript, objects are dynamic collections of key-value pairs, where keys are strings (or Symbols) and values can be of 
+    any data type, including other objects, functions, and primitive values. Objects in JavaScript can be created using object 
+    literals, constructor functions, or class syntax.
+
+
+Understanding Object:
+
+    * Key-Value Pairs
+        
+        Objects are collections of key-value pairs. Keys act like unique identifiers (often strings) and values represent
+        the data associated with that key.
+
+    * Unordered
+        
+        Keys in an object are not guaranteed to be stored in a specific order. This means iterating through an object won't 
+        necessarily follow the order you defined the key-value pairs.
+
+
+Creating the Object with new keyword:
+
+    Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case 
+    sensitive. You can define a property by assigning it a value. For example, let’s create an object named myCar and 
+    give it properties named make, model, and year as follows
+
+        var myCar = new Object();
+        myCar.make = 'Ford';
+        myCar.model = 'Mustang';
+        myCar.year = 1969;
+
+        Access the value in Object:
+
+            * Properties of JavaScript objects can also be accessed or set using a bracket notatio. For example, we could access 
+              the properties of the myCar object as follows
+
+                myCar['make'] = 'Ford';
+                myCar['model'] = 'Mustang';
+                myCar['year'] = 1969;
+    
+Creating Object with Object Literal: 
+
+    One of easiest way to create a javascript object is object literal, simply define the property and values inside curly 
+    braces as shown below
+
+    let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+
+    Access the value in Object:
+
+        * Properties of JavaScript objects can also be accessed or set using a dot notation. For example, we could access 
+            the properties of the bike object as follows
+
+            bike.name; || bike.maker; || bike.engine;
+
+Internal Representation of Objects:
+
+    Hash Tables: 
+
+        Most JavaScript engines likely use hash tables for object storage. A hash table is a data structure that efficiently maps 
+        keys to their corresponding values. When you access a property using dot notation (e.g., object.property), the engine 
+        performs a lookup in the hash table based on the property key.
+
+    Store only reference: 
+
+        Objects are reference types, meaning the variable stores a reference (memory address) to the actual object in memory. 
+        When you assign an object to another variable, you're essentially copying the reference, not the object itself.

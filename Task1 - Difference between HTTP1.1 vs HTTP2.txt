@@ -1,0 +1,155 @@
+
+
+An Overview of HTTP (Hyper Text Transfer Protocol): 
+
+    HTTP is a protocol for fetching resources. It is the foundation of any data exchange on the Web and it is a client-server 
+    protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is 
+    reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, 
+    and more.
+
+    Clients and servers communicate by exchanging individual messages (as opposed to a stream of data). The messages sent by 
+    the client, usually a Web browser, are called requests and the messages sent by the server as an answer are called responses.
+
+
+Evolution of HTTP:
+
+    HTTP is the underlying protocol of the World Wide Web. Developed by Tim Berners-Lee and his team between 1989-1991.
+
+        1. HTTP/0.9 - The one-line protocol
+        2. HTTP/1.0 - Building extensibility
+        3. HTTP/1.1 - The standardized protocol
+        4. HTTP/2   - A protocol for greater performance
+        5. HTTP/3 
+
+    1. HTTP/0.9 - The one-line protocol:
+
+        * The initial version of HTTP had no version number; it was later called 0.9 to differentiate it from later versions. 
+          HTTP/0.9 was extremely simple: requests consisted of a single line and started with the only possible method GET 
+          followed by the path to the resource. The full URL wasn't included as the protocol, server, and port weren't necessary 
+          once connected to the server. 
+        * The response was extremely simple, too: it only consisted of the file itself.
+        * Unlike subsequent evolutions, there were no HTTP headers. This meant that only HTML files could be transmitted. There 
+          were no status or error codes. If there was a problem, a specific HTML file was generated and included a description of 
+          the problem for human consumption.
+
+    2. HTTP/1.0 – Building extensibility
+
+        * Versioning information was sent within each request (HTTP/1.0 was appended to the GET line).
+        * A status code line was also sent at the beginning of a response. This allowed the browser itself to recognize the success
+          or failure of a request and adapt its behavior accordingly. For example, updating or using its local cache in a specific 
+          way.
+        * The concept of HTTP headers was introduced for both requests and responses. Metadata could be transmitted and the protocol 
+          became extremely flexible and extensible.
+        * Documents other than plain HTML files could be transmitted thanks to the Content-Type header.
+
+    3. HTTP/1.1 – The standardized protocol
+
+        * A connection could be reused
+        * Pipelining was added. This allowed a second request to be sent before the answer to the first one was fully transmitted
+        * Additional cache control mechanisms were introduced.
+        * Chunked responses were also supported.
+        * Host header, the ability to host different domains from the same IP address allowed server collocation.
+    
+    4. HTTP/2 - A Protocol for greater performance
+
+        * Over the years, web pages became more complex. Some of them were even applications in their own right. More visual media
+          was displayed and the volume and size of scripts adding interactivity also increased. Much more data was transmitted 
+          over significantly more HTTP requests and this created more complexity and overhead for HTTP/1.1 connections. To account 
+          for this, Google implemented an experimental protocol SPDY in the early 2010s. This alternative way of exchanging data 
+          between client and server amassed interest from developers working on both browsers and servers. SPDY defined an 
+          increase in responsiveness and solved the problem of duplicate data transmission, serving as the foundation for the 
+          HTTP/2 protocol.
+
+
+HTTP Methods and Status codes:
+
+    HTTP Methods:
+
+        * GET    - Retrieves information from a server (e.g., loading a webpage).
+        * POST   - Submits data to a server (e.g., filling out a form).
+        * PUT    - Updates data on a server.
+        * DELETE - Removes data from a server.
+        * Patch  - Partial modifications of a resource on a server
+
+    HTTP Status Codes (Commonly used ones):
+
+        100 - Continue
+        200 - OK
+        201 - Created
+        202 - Accepted
+        204 - No Content
+        400 - Bad Request
+        401 - Unauthorized
+        403 - Forbidden
+        404 - Not Found
+        500 - Interal Server Error
+        502 - Bad Gateway
+        503 - Service Unavailable
+
+
+Difference between HTTP/1.1 and HTTP/2:
+
+    HTTP/1.1 : 
+
+        * A connection could be reused, which saved time. It no longer needed to be opened multiple times to display the resources 
+          embedded in the single original document.
+        * Pipelining was added. This allowed a second request to be sent before the answer to the first one was fully transmitted.
+          This lowered the latency of the communication.
+        * Chunked responses were also supported.
+        * Additional cache control mechanisms were introduced.
+        * Content negotiation, including language, encoding, and type, was introduced. A client and a server could now agree on 
+          which content to exchange.
+        * Thanks to the Host header, the ability to host different domains from the same IP address allowed server collocation.
+
+        A typical flow of requests, all through one single connection, looked like this:
+
+            GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+            Host: developer.mozilla.org
+            User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+            Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+            Accept-Language: en-US,en;q=0.5
+            Accept-Encoding: gzip, deflate, br
+            Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+
+            200 OK
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Type: text/html; charset=utf-8
+            Date: Wed, 20 Jul 2016 10:55:30 GMT
+            Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
+            Keep-Alive: timeout=5, max=1000
+            Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
+            Server: Apache
+            Transfer-Encoding: chunked
+            Vary: Cookie, Accept-Encoding
+
+            (content)
+
+    HTTP/2 :
+
+        * Over the years, web pages became more complex. Some of them were even applications in their own right. More visual media 
+          was displayed and the volume and size of scripts adding interactivity also increased. Much more data was transmitted 
+          over significantly more HTTP requests and this created more complexity and overhead for HTTP/1.1 connections. To 
+          account for this, Google implemented an experimental protocol SPDY in the early 2010s. This alternative way of 
+          exchanging data between client and server amassed interest from developers working on both browsers and servers. SPDY
+          defined an increase in responsiveness and solved the problem of duplicate data transmission, serving as the foundation
+          for the HTTP/2 protocol. 
+
+    The HTTP/2 protocol differs from HTTP/1.1 in a few ways:
+
+        * It's a binary protocol rather than a text protocol. It can't be read and created manually. Despite this hurdle, it 
+          allows for the implementation of improved optimization techniques.
+        * It's a multiplexed protocol. Parallel requests can be made over the same connection, removing the constraints of the 
+          HTTP/1.x protocol.
+        * It compresses headers. As these are often similar among a set of requests, this removes the duplication and overhead 
+          of data transmitted.
+        * It allows a server to populate data in a client cache through a mechanism called the server push.
+
+    The Performance Edge of HTTP/2
+
+        By addressing the limitations of HTTP/1.1, HTTP/2 offers significant performance benefits:
+
+        * Faster Page Load Times: Concurrent downloads and reduced data size lead to noticeably faster webpage loading, 
+          especially for content-heavy websites.
+        * Improved User Experience: Quicker loading times translate to a smoother browsing experience for users.
+        * Enhanced Mobile Performance: HTTP/2's efficiency is particularly advantageous for mobile users with limited bandwidth.
