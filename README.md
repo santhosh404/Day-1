@@ -3,19 +3,23 @@
 2. Javascript Objects and its Internal Representation
 
 References: 
-  <div style="margin-left: 10px;"> 
+  <div style="margin-left: 10px"> 
   HTTP:<br />
+    <div style="margin-left: 10px"> 
     MDN Docs: <br />
       https://developer.mozilla.org/en-US/docs/Web/HTTP <br />
     Google's Gemini:
       https://gemini.google.com<br />
+    </div>
   </div>
 
   <div style="margin-left: 10px;"> 
   Object: <br />
+    <div style="margin-left: 10px;"> 
     MDN Docs: <br />
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects <br />
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br />
     Google's Gemini: 
       https://gemini.google.com
-     </div>
+    </div>
+  </div>
