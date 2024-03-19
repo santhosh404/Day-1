@@ -4,13 +4,14 @@
 
 References: 
 
-  HTTP: 
-    MDN Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP <br />
-    https://gemini.google.com
+  HTTP:<br />
+    MDN Docs: <br />
+      https://developer.mozilla.org/en-US/docs/Web/HTTP <br />
+      https://gemini.google.com<br />
     
-  Object: 
-    MDN Docs: 
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
+  Object: <br />
+    MDN Docs: <br />
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects <br />
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br />
     
     https://gemini.google.com
