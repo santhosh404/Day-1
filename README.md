@@ -6,10 +6,8 @@ References:
   <div style="margin-left: 10px"> 
   HTTP:<br />
     <div style="margin-left: 10px"> 
-    MDN Docs: <br />
-      https://developer.mozilla.org/en-US/docs/Web/HTTP <br />
-    Google's Gemini:
-      https://gemini.google.com<br />
+    MDN Docs: https://developer.mozilla.org/en-US/docs/Web/HTTP <br />
+    Google's Gemini: https://gemini.google.com<br />
     </div>
   </div>
 
@@ -18,7 +16,7 @@ References:
     <div style="margin-left: 10px;"> 
     MDN Docs: <br />
       https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects <br />
-      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br />
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object <br /><br />
     Google's Gemini: 
       https://gemini.google.com
     </div>
