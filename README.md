@@ -1,7 +1,6 @@
-Day 1 Tasks:
 
-  1. Difference between HTTP/1.1 and HTTP/2
-  2. Javascript Objects and its Internal Representation
+1. Difference between HTTP/1.1 and HTTP/2
+2. Javascript Objects and its Internal Representation
 
 References: 
 
